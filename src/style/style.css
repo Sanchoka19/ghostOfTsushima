@@ -1,0 +1,98 @@
+@font-face {
+  font-family: bold-masberco;
+  src: url("../assets/font/masberco/Masberco.ttf");
+}
+@font-face {
+  font-family: regular-jamjure;
+  src: url("../assets/font/jamjure/Bai_Jamjuree/BaiJamjuree-Regular.ttf");
+}
+@font-face {
+  font-family: niagara;
+  src: url("../assets/font/niagara/NIAGSOL.TTF");
+}
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../src/assets/image/herro.png") top/cover no-repeat;
+}
+
+.saba {
+  height: 100vh;
+}
+
+@font-face {
+  font-family: bold-masberco;
+  src: url("../assets/font/masberco/Masberco.ttf");
+}
+@font-face {
+  font-family: regular-jamjure;
+  src: url("../assets/font/jamjure/Bai_Jamjuree/BaiJamjuree-Regular.ttf");
+}
+@font-face {
+  font-family: niagara;
+  src: url("../assets/font/niagara/NIAGSOL.TTF");
+}
+@font-face {
+  font-family: bold-masberco;
+  src: url("../assets/font/masberco/Masberco.ttf");
+}
+@font-face {
+  font-family: regular-jamjure;
+  src: url("../assets/font/jamjure/Bai_Jamjuree/BaiJamjuree-Regular.ttf");
+}
+@font-face {
+  font-family: niagara;
+  src: url("../assets/font/niagara/NIAGSOL.TTF");
+}
+@font-face {
+  font-family: bold-masberco;
+  src: url("../assets/font/masberco/Masberco.ttf");
+}
+@font-face {
+  font-family: regular-jamjure;
+  src: url("../assets/font/jamjure/Bai_Jamjuree/BaiJamjuree-Regular.ttf");
+}
+@font-face {
+  font-family: niagara;
+  src: url("../assets/font/niagara/NIAGSOL.TTF");
+}
+@font-face {
+  font-family: bold-masberco;
+  src: url("../assets/font/masberco/Masberco.ttf");
+}
+@font-face {
+  font-family: regular-jamjure;
+  src: url("../assets/font/jamjure/Bai_Jamjuree/BaiJamjuree-Regular.ttf");
+}
+@font-face {
+  font-family: niagara;
+  src: url("../assets/font/niagara/NIAGSOL.TTF");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+button,
+a,
+li,
+input {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

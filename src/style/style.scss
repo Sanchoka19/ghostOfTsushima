@@ -1,0 +1,30 @@
+@use "./import";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    outline: none;
+}
+
+button,
+a,
+li,
+input {
+    cursor: pointer;
+}

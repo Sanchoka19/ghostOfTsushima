@@ -1,0 +1,19 @@
+@import "../variables";
+
+
+@mixin readBtn($fontSize) {
+    font-size: $fontSize;
+}
+
+.read-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $subColor;
+
+    img {
+        padding: 4px;
+        width: 5px;
+        height: 9px;
+    }
+}
