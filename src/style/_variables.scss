@@ -5,9 +5,20 @@ $lightTxtFontColor: #B1A7A6;
 $socialNetworkColor: #676262;
 $subColor: #CA6702;
 $mainStripeColor: #E5383B;
-$backgroundColor: #00000000;
+$backgroundColor: #000;
 
-$mainTitleFontSize: 150px;
+$mainTitleFontSize: 220px;
 $secondaryTitleFontSize: 100px;
 $numFonSize: 100px;
 $descriptionFontSize: 24px;
+
+$containerWrapper: clamp(320px, 100%, 1642px);
+$stripeWrapper: clamp(320px, 86%, 1642px);
+$imgCon: clamp(400px, 100%, 809px);
+
+@mixin side-blur() {
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    width: 139px;
+    height: 100vh;
+}
