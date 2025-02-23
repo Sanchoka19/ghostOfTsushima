@@ -3,12 +3,17 @@
 .page_num {
     color: $pagerColor;
     background-color: #161A1D;
-    padding: 15px 40px;
     font-family: niagara;
     font-size: 100px;
-    position: fixed;
-    right: 0;
-    top: 0;
+    position: sticky;
+    width: 139px;
+    height: 137px;
+    top: 0px;
+    left: 100vw;
+    letter-spacing: 10px;
     z-index: 200;
-    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

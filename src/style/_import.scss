@@ -1,7 +1,9 @@
+@use "./components/pageNum";
+@use "./components/stripe";
+@use "./components/button";
 @use "./base/hero";
+@use "./base/artist";
 @use "./base/galery";
 @use "./base/history";
-@use "./base/artist";
 @use "./base/footer";
-@use "./components/pageNum";
-@use "./components/button";
+@use "./components/inputText";

@@ -10,9 +10,8 @@
     flex-wrap: wrap;
     position: relative;
     opacity: 0;
-    transform: translateY(50px);
     animation: fadeInUp 1s ease-out forwards;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 // Gallery Grid
@@ -20,7 +19,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 100%;
+    width: 100vw;
 
     .img-grid {
         position: relative;
@@ -35,15 +34,11 @@
             object-fit: cover;
             transition: transform 0.6s ease-in-out;
             filter: grayscale(0%);
-      
-           
         }
 
-        &:hover img { 
+        &:hover img {
             transform: scale(1.1);
             filter: grayscale(100%);
-            
-            
         }
     }
 
@@ -68,8 +63,10 @@
             margin-bottom: 15px;
 
             li {
-                transition: transform 0.3s linear, opacity 0.3s linear;
-                font-size: $mainTitleFontSize;
+                transition:
+                    transform 0.3s linear,
+                    opacity 0.3s linear;
+                font-size: 160px;
             }
 
             &:hover li {
@@ -77,13 +74,27 @@
                 opacity: 0;
             }
 
-            li:nth-child(1) { transition-delay: 0.2s; }
-            li:nth-child(2) { transition-delay: 0.4s; }
-            li:nth-child(3) { transition-delay: 0.6s; }
-            li:nth-child(4) { transition-delay: 0.8s; }
-            li:nth-child(5) { transition-delay: 1.0s; }
-            li:nth-child(6) { transition-delay: 1.2s; }
-            li:nth-child(7) { transition-delay: 1.4s; }
+            li:nth-child(1) {
+                transition-delay: 0.2s;
+            }
+            li:nth-child(2) {
+                transition-delay: 0.4s;
+            }
+            li:nth-child(3) {
+                transition-delay: 0.6s;
+            }
+            li:nth-child(4) {
+                transition-delay: 0.8s;
+            }
+            li:nth-child(5) {
+                transition-delay: 1s;
+            }
+            li:nth-child(6) {
+                transition-delay: 1.2s;
+            }
+            li:nth-child(7) {
+                transition-delay: 1.4s;
+            }
         }
 
         p {
@@ -92,7 +103,9 @@
             line-height: 1.5;
             margin-bottom: 20px;
             transform: translateY(10px);
-            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+            transition:
+                transform 0.6s ease-in-out,
+                opacity 0.6s ease-in-out;
         }
 
         &:hover p {
@@ -111,7 +124,7 @@
             position: relative;
             transition: transform 0.3s ease-in-out;
 
-            &:hover {
+            & img:hover {
                 transform: translateX(10px); // Slight move on hover
             }
 
@@ -128,7 +141,6 @@
     }
 }
 
-// Fade In Animation
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -139,4 +151,3 @@
         transform: translateY(0);
     }
 }
-
