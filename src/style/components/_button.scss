@@ -8,12 +8,14 @@
 .read-more-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     color: $subColor;
+    font-size: $descriptionFontSize;
+    font-family: regular-jamjure;
+    
+
 
     img {
         padding: 4px;
-        width: 5px;
-        height: 9px;
     }
 }

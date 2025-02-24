@@ -11,3 +11,18 @@ $mainTitleFontSize: 150px;
 $secondaryTitleFontSize: 100px;
 $numFonSize: 100px;
 $descriptionFontSize: 24px;
+$containerWrapper: clamp(1400px, 99%, 1640px);
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin side-blur() {
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    width: 139px;
+    height: 100vh;
+}

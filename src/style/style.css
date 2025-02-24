@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: bold-masberco;
   src: url("../assets/font/masberco/Masberco.ttf");
@@ -32,6 +33,266 @@
   font-family: niagara;
   src: url("../assets/font/niagara/NIAGSOL.TTF");
 }
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0 auto;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+  cursor: pointer;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+}
+.gallery-grid .img-grid {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-grid .img-grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+.gallery-grid .img-grid:hover img {
+  transform: scale(1.1);
+}
+.gallery-grid .text-content {
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  grid-column: span 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+.gallery-grid .text-content .title {
+  display: flex;
+  font-size: 150px;
+  color: #BA181B;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.gallery-grid .text-content .title li {
+  transition: transform 0.3s linear, opacity 0.3s linear;
+  font-size: 150px;
+}
+.gallery-grid .text-content .title:hover li {
+  transform: translateY(-200px);
+  opacity: 0;
+}
+.gallery-grid .text-content .title li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.gallery-grid .text-content .title li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.gallery-grid .text-content .title li:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.gallery-grid .text-content .title li:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.gallery-grid .text-content .title li:nth-child(5) {
+  transition-delay: 1s;
+}
+.gallery-grid .text-content .title li:nth-child(6) {
+  transition-delay: 1.2s;
+}
+.gallery-grid .text-content .title li:nth-child(7) {
+  transition-delay: 1.4s;
+}
+.gallery-grid .text-content p {
+  font-size: 24px;
+  color: #B1A7A6;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  transform: translateY(10px);
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+.gallery-grid .text-content:hover p {
+  transform: translateY(0);
+}
+.gallery-grid .text-content .read-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #CA6702;
+  font-size: 24px;
+  font-family: regular-jamjure;
+  margin-top: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery-grid .text-content .read-more-btn:hover {
+  transform: translateX(10px);
+}
+.gallery-grid .text-content .read-more-btn img {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery-grid .text-content .read-more-btn:hover img {
+  transform: translateX(5px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@font-face {
+  font-family: bold-masberco;
+  src: url("../assets/font/masberco/Masberco.ttf");
+}
+@font-face {
+  font-family: regular-jamjure;
+  src: url("../assets/font/jamjure/Bai_Jamjuree/BaiJamjuree-Regular.ttf");
+}
+@font-face {
+  font-family: niagara;
+  src: url("../assets/font/niagara/NIAGSOL.TTF");
+}
+.history-container {
+  background: url("../../../src/assets/image/history-con.png");
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.history-container .right-blurr, .history-container .left-blurr {
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  width: 139px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.0509803922);
+  position: absolute;
+  top: 0;
+  z-index: 200;
+}
+.history-container .right-blurr {
+  right: 0;
+}
+.history-container .left-blurr {
+  left: 0;
+}
+.history-container .page_num {
+  color: #660708;
+  background-color: #161A1D;
+  padding: 15px 40px;
+  font-family: niagara;
+  font-size: 100px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 200;
+}
+.history-container .content {
+  width: clamp(1400px, 99%, 1640px);
+  padding: 0 60px;
+}
+.history-container .content .history-box {
+  background: rgba(165, 42, 42, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  width: 690px;
+  height: 766px;
+  position: relative;
+  /* scroll animation */
+  /* "Read More" button effect*/
+}
+.history-container .content .history-box .history-title {
+  color: #CA6702;
+  font-size: 150px;
+  text-transform: uppercase;
+  font-family: niagara;
+}
+.history-container .content .history-box .scrollable-text {
+  max-height: 472px;
+  overflow-y: scroll;
+  color: #B1A7A6;
+  font-size: 24px;
+  padding-right: 10px;
+  scrollbar-width: none;
+  scrollbar-color: #CA6702 transparent;
+  cursor: grabbing;
+  transition: max-height 0.5s ease, background 0.3s ease;
+}
+.history-container .content .history-box .scrollable-text:hover {
+  max-height: 500px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.history-container .content .history-box .scrollable-text .tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  /* 2️⃣ - ToolTip  effect*/
+}
+.history-container .content .history-box .scrollable-text .tooltip .tooltip-text {
+  visibility: hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.history-container .content .history-box .scrollable-text .tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+.history-container .content .history-box .read-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #CA6702;
+  font-size: 24px;
+  font-family: regular-jamjure;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.history-container .content .history-box .read-more-btn:hover {
+  transform: scale(1.1);
+  color: #fd9a35;
+}
+
 @font-face {
   font-family: bold-masberco;
   src: url("../assets/font/masberco/Masberco.ttf");
@@ -56,18 +317,30 @@
   font-family: niagara;
   src: url("../assets/font/niagara/NIAGSOL.TTF");
 }
-@font-face {
-  font-family: bold-masberco;
-  src: url("../assets/font/masberco/Masberco.ttf");
-}
-@font-face {
-  font-family: regular-jamjure;
-  src: url("../assets/font/jamjure/Bai_Jamjuree/BaiJamjuree-Regular.ttf");
-}
-@font-face {
+.page_num {
+  color: #660708;
+  background-color: #161A1D;
+  padding: 15px 40px;
   font-family: niagara;
-  src: url("../assets/font/niagara/NIAGSOL.TTF");
+  font-size: 100px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 200;
 }
+
+.read-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #CA6702;
+  font-size: 24px;
+  font-family: regular-jamjure;
+}
+.read-more-btn img {
+  padding: 4px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -76,6 +349,7 @@
 
 button {
   border: none;
+  background: transparent;
 }
 
 a {

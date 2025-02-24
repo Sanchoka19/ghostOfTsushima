@@ -1,2 +1,127 @@
 @import "../variables";
 @import "../font";
+
+
+.history-container{
+    background: url("../../../src/assets/image/history-con.png") ;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .right-blurr, .left-blurr {
+        @include side-blur;
+        background: #ffffff0d;
+        position: absolute;
+        top: 0;
+        z-index: 200;
+    }
+
+    .right-blurr { right: 0; }
+    .left-blurr { left: 0; }
+
+    .page_num {
+        color: $pagerColor;
+        background-color: #161A1D;
+        padding: 15px 40px;
+        font-family: niagara;
+        font-size: $numFonSize;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 200;
+    }
+
+    .content {
+        width: $containerWrapper;
+        padding: 0 60px;
+
+        .history-box {
+            background: rgba(165, 42, 42, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            width: 690px;
+            height: 766px;
+            position: relative;
+
+            .history-title {
+                color: $subColor;
+                font-size: $mainTitleFontSize;
+                text-transform: uppercase;
+                font-family: niagara;
+            }
+
+            /* scroll animation */
+            .scrollable-text {
+                max-height: 472px;
+                overflow-y: scroll;
+                color: $lightTxtFontColor;
+                font-size: $descriptionFontSize;
+                padding-right: 10px;
+                scrollbar-width: none;
+                scrollbar-color: $subColor transparent;
+                cursor: grabbing;
+                transition: max-height 0.5s ease, background 0.3s ease;
+
+                &:hover {
+                    max-height: 500px;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                .tooltip {
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    text-decoration: underline;
+
+                    /* 2️⃣ - ToolTip  effect*/
+                    .tooltip-text {
+                        visibility: hidden;
+                        width: 160px;
+                        background-color: black;
+                        color: #fff;
+                        text-align: center;
+                        padding: 5px;
+                        border-radius: 5px;
+                        position: absolute;
+                        bottom: 150%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        opacity: 0;
+                        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+                        font-size: 14px;
+                        white-space: nowrap;
+                    }
+
+                    &:hover .tooltip-text {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(-5px);
+                    }
+                }
+            }
+
+            /* "Read More" button effect*/
+            .read-more-btn {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                color: $subColor;
+                font-size: $descriptionFontSize;
+                font-family: regular-jamjure;
+                margin-top: 10px;
+                cursor: pointer;
+                transition: transform 0.3s ease, color 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                    color: lighten($subColor, 20%);
+                }
+            }
+        }
+    }
+}
