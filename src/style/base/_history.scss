@@ -3,7 +3,7 @@
 
 
 .history-container{
-    background: url("../../../src/assets/image/history-con.png") ;
+    background: url("../../../src/assets/image/history-con.png");
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
@@ -39,38 +39,43 @@
     .content {
         width: $containerWrapper;
         padding: 0 60px;
+        
 
         .history-box {
-            background: rgba(165, 42, 42, 0.8);
-            padding: 20px;
-            border-radius: 8px;
+            background: $pagerColor; 
             width: 690px;
             height: 766px;
+            padding: 20px;
             position: relative;
 
             .history-title {
-                color: $subColor;
+                // color: $subColor;
+                background-image: url(../../../src/assets/image/history-con.png);
+                background-size: cover;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
                 font-size: $mainTitleFontSize;
+                font-weight: 400;
                 text-transform: uppercase;
                 font-family: niagara;
+                position: relative;
+                left: 49px;
             }
 
-            /* scroll animation */
+            /* Scrollable Text */
             .scrollable-text {
-                max-height: 472px;
+                height: 472px;
                 overflow-y: scroll;
                 color: $lightTxtFontColor;
                 font-size: $descriptionFontSize;
-                padding-right: 10px;
+                padding: 15px;
                 scrollbar-width: none;
-                scrollbar-color: $subColor transparent;
+                scrollbar-color: rgba(126, 22, 22, 0.3) transparent;
                 cursor: grabbing;
-                transition: max-height 0.5s ease, background 0.3s ease;
-
-                &:hover {
-                    max-height: 500px;
-                    background: rgba(255, 255, 255, 0.1);
-                }
+                transition: max-height 0.5s ease, background 0.3s ease, border 0.3s ease;
+                position: relative;
+                left: 10px;
+                
 
                 .tooltip {
                     position: relative;
@@ -78,12 +83,11 @@
                     cursor: pointer;
                     text-decoration: underline;
 
-                    /* 2️⃣ - ToolTip  effect*/
                     .tooltip-text {
                         visibility: hidden;
                         width: 160px;
-                        background-color: black;
-                        color: #fff;
+                        background-color: $backgroundColor;
+                        color: $lightTxtFontColor;
                         text-align: center;
                         padding: 5px;
                         border-radius: 5px;
@@ -95,30 +99,33 @@
                         transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
                         font-size: 14px;
                         white-space: nowrap;
+                        
                     }
 
                     &:hover .tooltip-text {
                         visibility: visible;
                         opacity: 1;
                         transform: translateX(-50%) translateY(-5px);
+                        
                     }
                 }
             }
 
-            /* "Read More" button effect*/
+            /* Read More button effect */
             .read-more-btn {
                 display: flex;
                 align-items: center;
-                gap: 20px;
                 color: $subColor;
                 font-size: $descriptionFontSize;
                 font-family: regular-jamjure;
-                margin-top: 10px;
+                margin-top: 27px;
+                position: relative;
+                left: 25px;
                 cursor: pointer;
                 transition: transform 0.3s ease, color 0.3s ease;
 
+
                 &:hover {
-                    transform: scale(1.1);
                     color: lighten($subColor, 20%);
                 }
             }
