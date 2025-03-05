@@ -8,7 +8,6 @@
     height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -24,21 +23,10 @@
     .right-blurr { right: 0; }
     .left-blurr { left: 0; }
 
-    .page_num {
-        color: $pagerColor;
-        background-color: #161A1D;
-        padding: 15px 40px;
-        font-family: niagara;
-        font-size: $numFonSize;
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 200;
-    }
-
     .content {
         width: $containerWrapper;
         padding: 0 60px;
+        align-self: center;
         
 
         .history-box {
@@ -49,11 +37,11 @@
             position: relative;
 
             .history-title {
-                // color: $subColor;
-                background-image: url(../../../src/assets/image/history-con.png);
-                background-size: cover;
-                -webkit-text-fill-color: transparent;
-                -webkit-background-clip: text;
+                color: $subColor;
+                // background-image: url(../../../src/assets/image/history-con.png);
+                // background-size: cover;
+                // -webkit-text-fill-color: transparent;
+                // -webkit-background-clip: text;
                 font-size: $mainTitleFontSize;
                 font-weight: 400;
                 text-transform: uppercase;
@@ -85,7 +73,7 @@
 
                     .tooltip-text {
                         visibility: hidden;
-                        width: 160px;
+                        // width: 160px;
                         background-color: $backgroundColor;
                         color: $lightTxtFontColor;
                         text-align: center;
